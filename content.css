@@ -3,7 +3,7 @@
   width: 30px;
   position: fixed;
   z-index: 1000;
-  background-image: url('/images/rest.png');
+  background-image: url('/browser-pet/images/rest.png');
   background-size: 30px 30px;
   background-position: 0 0;
 }
@@ -18,7 +18,7 @@
 }
 
 .ssh-pet.rest {
-  background-image: url('/images/rest-sprite.png');
+  background-image: url('/browser-pet/images/rest-sprite.png');
   background-repeat: repeat-x;
   background-size: 90px 30px;
   background-position: 0 0;
@@ -37,7 +37,7 @@
 }
 
 .ssh-pet.shift-left {
-  background-image: url('/images/shift-left-sprite.png');
+  background-image: url('/browser-pet/images/shift-left-sprite.png');
   background-repeat: repeat-x;
   background-size: 240px 30px;
   background-position: 0 0;
@@ -56,7 +56,7 @@
 }
 
 .ssh-pet.shift-right {
-  background-image: url('/images/shift-left-sprite.png');
+  background-image: url('/browser-pet/images/shift-left-sprite.png');
   background-repeat: repeat-x;
   background-size: 240px 30px;
   background-position: 0 0;
@@ -77,7 +77,7 @@
 }
 
 .ssh-pet.disappear {
-  background-image: url('/images/gone-sprite.png');
+  background-image: url('/browser-pet/images/gone-sprite.png');
   background-repeat: repeat-x;
   background-size: 180px 30px;
   background-position: 0 0;
@@ -94,7 +94,7 @@
 }
 
 .ssh-pet.reappear {
-  background-image: url('/images/gone-sprite.png');
+  background-image: url('/browser-pet/images/gone-sprite.png');
   background-repeat: repeat-x;
   background-size: 180px 30px;
   background-position-x: -150px;
@@ -123,7 +123,7 @@
 }
 
 .ssh-pet.eat {
-  background-image: url('/images/eat-sprite.png');
+  background-image: url('/browser-pet/images/eat-sprite.png');
   background-repeat: repeat-x;
   background-size: 240px 30px;
   background-position-x: 0px;
@@ -140,7 +140,7 @@
 }
 
 .ssh-pet.digest {
-  background-image: url('/images/eat-sprite.png');
+  background-image: url('/browser-pet/images/eat-sprite.png');
   background-repeat: repeat-x;
   background-size: 240px 30px;
   background-position-x: -180px;
@@ -179,7 +179,7 @@
 }
 
 .ssh-pet.hate {
-  background-image: url('/images/hate.png');
+  background-image: url('/browser-pet/images/hate.png');
   background-position: 0 0;
   background-size: 30px 30px;
   animation: hating 0.1s infinite;
