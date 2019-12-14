@@ -3,10 +3,6 @@
   "name": "Super Silly Hackathon",
   "description": "Super Silly Hackathon",
   "version": "1.0.0",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

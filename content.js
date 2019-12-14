@@ -86,9 +86,8 @@ function ssh() {
     }
 
     function watchMouse() {
-      document.body.addEventListener('mousemove', async event => {
-        const { clientX, clientY } = event;
-        if (onPet(clientX, clientY) && !animating) {
+      pet.addEventListener('mousemove', async event => {
+        if (!animating) {
           animating = true;
           await shiftAway();
           animating = false;
@@ -177,10 +176,8 @@ function ssh() {
       updatePosition(position.x + x, position.y + y);
     }
     function updatePosition(x, y) {
-      position.x = x;
-      position.y = y;
-      pet.style.left = position.x + 'px';
-      pet.style.top = position.y + 'px';
+      pet.style.left = (position.x = x) + 'px';
+      pet.style.top = (position.y = y) + 'px';
     }
     function onPet(x, y) {
       return within(
