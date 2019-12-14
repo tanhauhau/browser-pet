@@ -1,0 +1,186 @@
+.ssh-pet {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 1000;
+  background-image: url('/images/rest.png');
+  background-size: 30px 30px;
+  background-position: 0 0;
+}
+
+@keyframes ssh-pet-rest {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -90px;
+  }
+}
+
+.ssh-pet.rest {
+  background-image: url('/images/rest-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 90px 30px;
+  background-position: 0 0;
+  animation: ssh-pet-rest 0.2s steps(3);
+}
+
+@keyframes ssh-pet-shift-left {
+  0% {
+    background-position-x: 0;
+    transform: translateX(0);
+  }
+  100% {
+    background-position-x: -240px;
+    transform: translateX(-30px);
+  }
+}
+
+.ssh-pet.shift-left {
+  background-image: url('/images/shift-left-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 240px 30px;
+  background-position: 0 0;
+  animation: ssh-pet-shift-left 0.8s steps(8);
+}
+
+@keyframes ssh-pet-shift-right {
+  0% {
+    background-position-x: 0;
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    background-position-x: -240px;
+    transform: translateX(30px) scaleX(-1);
+  }
+}
+
+.ssh-pet.shift-right {
+  background-image: url('/images/shift-left-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 240px 30px;
+  background-position: 0 0;
+  animation: ssh-pet-shift-right 0.8s steps(8);
+}
+.ssh-pet.shift-left.fast,
+.ssh-pet.shift-right.fast {
+  animation-duration: 0.4s;
+}
+
+@keyframes ssh-pet-disappear {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -180px;
+  }
+}
+
+.ssh-pet.disappear {
+  background-image: url('/images/gone-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 180px 30px;
+  background-position: 0 0;
+  animation: ssh-pet-disappear 0.8s steps(6);
+}
+
+@keyframes ssh-pet-reappear {
+  0% {
+    background-position-x: -150px;
+  }
+  100% {
+    background-position-x: 30px;
+  }
+}
+
+.ssh-pet.reappear {
+  background-image: url('/images/gone-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 180px 30px;
+  background-position-x: -150px;
+  animation: ssh-pet-reappear 0.8s steps(6);
+}
+
+@keyframes ssh-pet-eat {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -180px;
+  }
+}
+
+@keyframes ssh-pet-eat-move {
+  0%, 30% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ssh-pet.eat {
+  background-image: url('/images/eat-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 240px 30px;
+  background-position-x: 0px;
+  animation: ssh-pet-eat 0.8s steps(6), ssh-pet-eat-move 0.8s ease-in-out;
+}
+
+@keyframes ssh-pet-digest {
+  0% {
+    background-position-x: -180px;
+  }
+  100% {
+    background-position-x: -240px;
+  }
+}
+
+.ssh-pet.digest {
+  background-image: url('/images/eat-sprite.png');
+  background-repeat: repeat-x;
+  background-size: 240px 30px;
+  background-position-x: -180px;
+  animation: ssh-pet-digest 0.3s steps(2);
+  animation-iteration-count: 2;
+}
+
+@keyframes item-disappearing {
+  0% {
+    filter: blur(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    filter: blur(8px);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.item-disappearing {
+  animation: item-disappearing 1s;
+}
+
+@keyframes hating {
+  0% {
+    transform: scale(1.1) translateX(-2px)
+  }
+  50% {
+    transform: scale(1.1) translateX(2px)
+  }
+  100% {
+    transform: scale(1.1) translateX(-2px)
+  }
+}
+
+.ssh-pet.hate {
+  background-image: url('/images/hate.png');
+  background-position: 0 0;
+  background-size: 30px 30px;
+  animation: hating 0.1s infinite;
+}
